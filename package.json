@@ -1,0 +1,32 @@
+{
+  "name": "topic-patterns",
+  "version": "0.0.1",
+  "description": "A utility for matching strings to AMQP-style topic patterns and url templates.",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aomitayo/topic-patterns.git"
+  },
+  "keywords": [
+    "amqp",
+    "topic",
+    "url",
+    "templates"
+  ],
+  "author": "Adedayo Omitayo <adedayo.omitayo@flowswift.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aomitayo/topic-patterns/issues"
+  },
+  "homepage": "https://github.com/Aomitayo/topic-patterns",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
