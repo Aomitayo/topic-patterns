@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('chai').expect;
 var pattern = require('../');
 
@@ -18,7 +20,7 @@ describe('Topic Pattern', function(){
 			expect(matcher.match('stock.tokyo.microsoft')).to.be.false;
 		});
 
-		it('Matches a combinatio of single word(*) and multi word (#) patterns', function(){
+		it('Matches a combination of single word(*) and multi word (#) patterns', function(){
 			var matcher = pattern('#.nyse.*.price');
 			expect(matcher.match('stock.sale.nyse.google.price')).to.be.true;
 			expect(matcher.match('stock.trade.nyse.microsoft.price')).to.be.true;
