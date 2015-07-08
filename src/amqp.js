@@ -13,9 +13,9 @@ function AmqpPattern(patterns){
 AmqpPattern.prototype._compilePattern = function(pattern){
 	if(typeof pattern  === 'string'){
 		return new RegExp(
-			pattern
+			'^' + pattern
 				.replace(/\.?\*\.?/g, '(\\.?[a-zA-Z0-9]+\\.?)')
-				.replace(/\.?\#\.?/g, '(\\.?[a-zA-Z0-9]+(.[a-zA-Z0-9])*\\.?)?')
+				.replace(/\.?\#\.?/g, '(\\.?[a-zA-Z0-9]+(.[a-zA-Z0-9]+)*\\.?)?') + '$'
 		);
 	}
 	else if(typeof pattern === 'object' && pattern.test){

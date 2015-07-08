@@ -26,5 +26,10 @@ describe('Topic Pattern', function(){
 			expect(matcher.match('stock.trade.nyse.microsoft.price')).to.be.true;
 			expect(matcher.match('stock.trade.nyse.micro.soft.price')).to.be.false;
 		});
+		it('When without wild cards, it discriminates between a parent pattern and a child pattern', function(){
+			var matcher = pattern('stock.nyse');
+			expect(matcher.match('stock.nyse')).to.be.true;
+			expect(matcher.match('stock.nyse.microsoft')).to.be.false;
+		});
 	});
 });
